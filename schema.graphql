@@ -1,0 +1,743 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type ApplyWalletAmount {
+  order: OrderNode
+  status: String
+  message: String
+}
+
+type CategoryType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  productType: ProductTypeType
+  name: String!
+  isActive: Boolean!
+  isDeleted: Boolean!
+  parent: CategoryType
+  lft: Int!
+  rght: Int!
+  treeId: Int!
+  level: Int!
+  categorySet(offset: Int, before: String, after: String, first: Int, last: Int): CategoryTypeConnection!
+  productCategory(offset: Int, before: String, after: String, first: Int, last: Int): RealProductTypeConnection!
+}
+
+type CategoryTypeConnection {
+  pageInfo: PageInfo!
+  edges: [CategoryTypeEdge]!
+}
+
+type CategoryTypeEdge {
+  node: CategoryType
+  cursor: String!
+}
+
+type CompleteOrder {
+  order: OrderNode
+  status: String
+  message: String
+}
+
+type CreateCategory {
+  category: CategoryType
+}
+
+type CreateInventory {
+  message: String
+}
+
+type CreateOrder {
+  order: OrderNode
+  status: String
+  message: String
+  creditAvailability: [CreditAvailabilityResponseType]
+}
+
+type CreateProduct {
+  product: RealProductType
+}
+
+type CreateProductType {
+  productType: ProductTypeType
+}
+
+type CreateReconciliation {
+  reconciliation: ReconciliationType
+}
+
+type CreateRequest {
+  status: String
+  message: String
+  invalidProduct: String
+}
+
+type CreateSalesExecutive {
+  status: String
+  message: String
+}
+
+type CreateSalesExecutivePermanentAddress {
+  status: String
+  message: String
+}
+
+type CreateSalesExecutiveTemporaryAddress {
+  status: String
+  message: String
+}
+
+type CreateShop {
+  status: String
+  message: String
+}
+
+type CreateUpdateCreditLimit {
+  status: String
+  message: String
+}
+
+type CreateUpdatePriceGroup {
+  status: String
+  message: String
+  invalidSku: String
+  invalidSellingPrice: String
+}
+
+type CreateUpdateRoute {
+  status: String
+  message: String
+}
+
+type CreateUser {
+  status: String
+  message: String
+}
+
+type CreditAvailabilityResponseType {
+  categoryId: Int
+  categoryName: String
+  creditLimit: Float
+  creditAmount: Float
+  creditAvailable: Int
+  orderAmount: Float
+  isCreditAvailable: Boolean
+  status: String
+}
+
+scalar Date
+
+scalar DateTime
+
+scalar Decimal
+
+type DeleteCategory {
+  message: String
+}
+
+type DeletePriceGroup {
+  message: String
+}
+
+type DeleteProduct {
+  message: String
+}
+
+type DeleteProductType {
+  message: String
+}
+
+type DeleteRoute {
+  status: String
+  message: String
+}
+
+type DeleteSalesExecutive {
+  message: String
+}
+
+type DeleteShop {
+  status: String
+  message: String
+}
+
+type DropOrderItem {
+  order: OrderNode
+  status: String
+  message: String
+  creditAvailability: String
+}
+
+scalar GenericScalar
+
+type GroupBasedPriceType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  priceGroup: PriceGroupType
+  product: RealProductType
+  sellingPrice: Decimal!
+  discountSellingPrice: Decimal
+}
+
+type GroupBasedPriceTypeConnection {
+  pageInfo: PageInfo!
+  edges: [GroupBasedPriceTypeEdge]!
+}
+
+type GroupBasedPriceTypeEdge {
+  node: GroupBasedPriceType
+  cursor: String!
+}
+
+input GroupBasedPricesInput {
+  productSku: String!
+  sellingPrice: Decimal!
+  discountSellingPrice: Decimal
+}
+
+enum InventoryIncomingType {
+  NEW
+  RETURN
+}
+
+input InventoryProductStockUpdateInput {
+  productSku: String!
+  stock: Int!
+  incomingType: String!
+}
+
+type InventoryType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  salesExecutive: SalesExecutiveType!
+  product: RealProductType!
+  stock: Int!
+  dateTime: DateTime!
+  incomingType: InventoryIncomingType!
+  reconciliationItemInventory: [ReconciliationItemType!]!
+}
+
+type InventoryTypeConnection {
+  pageInfo: PageInfo!
+  edges: [InventoryTypeEdge]!
+}
+
+type InventoryTypeEdge {
+  node: InventoryType
+  cursor: String!
+}
+
+type LogoutUser {
+  status: String
+  message: String
+}
+
+type Mutation {
+  createOrder(data: OrderInput): CreateOrder
+  dropOrderItem(orderId: ID!, orderItemIds: [ID]!): DropOrderItem
+  updateOrderItem(orderId: ID!, orderItem: OrderItemInput!, shopId: ID!): UpdateOrderItem
+  completeOrder(amount: Float!, orderId: ID!, paymentData: [PaymentPartialInputOrPayBackCreditInput]!, paymentType: PaymentTypeEnum!, remarks: String, shopId: ID!): CompleteOrder
+  applyWalletAmount(amount: Float!, orderId: ID!, shopId: ID!): ApplyWalletAmount
+  getTransactionById(transactionId: ID): TransactionType
+  allTransactions: [TransactionType]
+  createReconciliation(productSku: String!, quantity: Int!, reconciliationProductType: String!, reconciliationType: String!, shopId: ID!): CreateReconciliation
+  createRequest(dueDate: DateTime!, isActive: Boolean!, requestedProducts: [RequestedProductsInput], shopId: ID!): CreateRequest
+  createUpdateCreditLimit(categoryId: ID!, percentage: Int!, shopId: ID!): CreateUpdateCreditLimit
+  createInventory(salesExecutiveId: ID!, stockDetails: [InventoryProductStockUpdateInput]!): CreateInventory
+  populateCategoryProductProductTypeData: ProductTypeCategoryProductDataPopulate
+  priceGroupImport: PriceGroupImport
+  createShop(address: String!, gstNumber: String, isActive: Boolean!, isChain: Boolean, name: String!, phoneNumber: String, place: String!, priceGroupId: ID!, totalCredit: Decimal, totalCreditLimit: Decimal, wallet: Decimal): CreateShop
+  updateShop(address: String!, gstNumber: String, isActive: Boolean!, isChain: Boolean, name: String!, phoneNumber: String, place: String!, priceGroupId: ID!, shopId: ID!, totalCredit: Decimal, totalCreditLimit: Decimal, wallet: Decimal): UpdateShop
+  deleteShop(priceGroupId: ID!, shopId: ID!): DeleteShop
+  createUpdatePriceGroup(groupBasedPrices: [GroupBasedPricesInput], isActive: Boolean!, name: String!): CreateUpdatePriceGroup
+  deletePriceGroup(priceGroupId: ID!): DeletePriceGroup
+  createSalesExecutive(dateOfBirth: Date, isActive: Boolean, mobileNumber: String!, name: String!, password1: String!, password2: String!, vehicleNumber: String): CreateSalesExecutive
+  updateSalesExecutive(dateOfBirth: Date, isActive: Boolean, mobileNumber: String, salesExecutiveId: ID!, vehicleNumber: String): UpdateSalesExecutive
+  createSalesExecutivePermanentAddress(addressLine1: String!, addressLine2: String, city: String!, country: String!, isActive: Boolean!, pincode: String!, salesExecutiveId: ID!, state: String!): CreateSalesExecutivePermanentAddress
+  createSalesExecutiveTemporaryAddress(addressLine1: String!, addressLine2: String, city: String!, country: String!, isActive: Boolean, pincode: String!, salesExecutiveId: ID!, state: String!): CreateSalesExecutiveTemporaryAddress
+  deleteSalesExecutive(salesExecutiveId: ID!): DeleteSalesExecutive
+  createUpdateRoute(description: String, endingPoint: String!, isActive: Boolean!, name: String!, startingPoint: String!): CreateUpdateRoute
+  deleteRoute(routeId: ID!): DeleteRoute
+  createProductType(isActive: Boolean!, isCreditAvailable: Boolean!, parentId: ID, tax: Decimal!, title: String!, unit: String!): CreateProductType
+  updateProductType(isActive: Boolean, isCreditAvailable: Boolean, parentId: ID, productTypeId: ID!, tax: Decimal, title: String, unit: String): UpdateProductType
+  deleteProductType(productTypeIds: [ID]!): DeleteProductType
+  createProduct(basePrice: Decimal!, categoryId: ID, isActive: Boolean!, mrpPrice: Decimal!, name: String!, parentId: ID, productTypeId: ID, selfLife: Int!, sellingPrice: Decimal!, sku: String!, unit: String!, weight: String!): CreateProduct
+  updateProduct(basePrice: Decimal, categoryId: ID, isActive: Boolean, mrpPrice: Decimal, name: String, parentId: ID, productId: ID!, productTypeId: ID, selfLife: String, sellingPrice: Decimal, sku: String, unit: String, weight: String): UpdateProduct
+  deleteProduct(productIds: [ID]!): DeleteProduct
+  createCategory(isActive: Boolean!, name: String!, parentId: ID, productTypeId: ID): CreateCategory
+  updateCategory(categoryId: ID!, isActive: Boolean, name: String, parentId: ID, productTypeId: ID): UpdateCategory
+  deleteCategory(categoryIds: [ID]!): DeleteCategory
+  signUp(email: String, mobileNumber: String!, password1: String!, password2: String!, username: String!): CreateUser
+  logout: LogoutUser
+  passwordResetOtp(mobileNumber: String!): PasswordResetOtp
+  passwordResetOtpVerify(mobileNumber: String!, otp: Int!): PasswordResetOtpVerify
+  passwordReset(confirmPassword: String!, password: String!): PasswordReset
+  tokenAuth(username: String!, password: String!): ObtainJSONWebToken
+  verifyToken(token: String): Verify
+  refreshToken(refreshToken: String): Refresh
+  revokeToken(refreshToken: String): Revoke
+}
+
+interface Node {
+  id: ID!
+}
+
+type ObtainJSONWebToken {
+  payload: GenericScalar!
+  refreshExpiresIn: Int!
+  token: String!
+  refreshToken: String!
+}
+
+input OrderInput {
+  shopId: ID!
+  orderItems: [OrderItemInput]!
+}
+
+input OrderItemInput {
+  productId: ID!
+  quantity: Int!
+}
+
+type OrderItemNode implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  order: OrderNode!
+  product: RealProductType!
+  quantity: Int
+  price: Decimal!
+  total: Decimal!
+}
+
+type OrderItemNodeConnection {
+  pageInfo: PageInfo!
+  edges: [OrderItemNodeEdge]!
+}
+
+type OrderItemNodeEdge {
+  node: OrderItemNode
+  cursor: String!
+}
+
+type OrderNode implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  status: OrderStatus!
+  billedTo: ShopType!
+  billedBy: SalesExecutiveType
+  billDate: Date
+  total: Decimal!
+  discount: Decimal!
+  isPaid: Boolean!
+  paidDate: String
+  isActive: Boolean!
+  outStandingCredit: Decimal!
+  orderItems(offset: Int, before: String, after: String, first: Int, last: Int): OrderItemNodeConnection!
+}
+
+type OrderNodeConnection {
+  pageInfo: PageInfo!
+  edges: [OrderNodeEdge]!
+}
+
+type OrderNodeEdge {
+  node: OrderNode
+  cursor: String!
+}
+
+enum OrderStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type PasswordReset {
+  status: String
+  message: String
+}
+
+type PasswordResetOtp {
+  status: String
+  message: String
+  otp: String
+}
+
+type PasswordResetOtpVerify {
+  status: String
+  token: String
+  message: String
+}
+
+input PaymentPartialInputOrPayBackCreditInput {
+  categoryId: Int!
+  amount: Float!
+}
+
+enum PaymentTypeEnum {
+  FULL
+  CREDIT
+  PARTIAL
+}
+
+type PriceGroupImport {
+  status: String
+  message: String
+}
+
+type PriceGroupType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  isActive: Boolean!
+  groupbasedpriceSet(offset: Int, before: String, after: String, first: Int, last: Int): GroupBasedPriceTypeConnection!
+  shopPriceGroup(offset: Int, before: String, after: String, first: Int, last: Int): ShopTypeConnection!
+}
+
+type ProductTypeCategoryProductDataPopulate {
+  message: String
+}
+
+type ProductTypeType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  title: String!
+  unit: ProductTypeUnit!
+  tax: Decimal!
+  isCreditAvailable: Boolean!
+  isActive: Boolean!
+  isDeleted: Boolean!
+  parent: ProductTypeType
+  lft: Int!
+  rght: Int!
+  treeId: Int!
+  level: Int!
+  producttypeSet(offset: Int, before: String, after: String, first: Int, last: Int): ProductTypeTypeConnection!
+  categoryProductType(offset: Int, before: String, after: String, first: Int, last: Int): CategoryTypeConnection!
+  productType(offset: Int, before: String, after: String, first: Int, last: Int): RealProductTypeConnection!
+}
+
+type ProductTypeTypeConnection {
+  pageInfo: PageInfo!
+  edges: [ProductTypeTypeEdge]!
+}
+
+type ProductTypeTypeEdge {
+  node: ProductTypeType
+  cursor: String!
+}
+
+enum ProductTypeUnit {
+  PENDING
+  KG
+  GRAM
+  DOZEN
+  PACKET
+  CASE
+}
+
+enum ProductUnit {
+  PENDING
+  KG
+  GRAM
+  DOZEN
+  PACKET
+  CASE
+}
+
+type Query {
+  allOrders: [OrderNode]
+  orderById(id: ID!): OrderNode
+  ordersByShopId(shopId: ID!): OrderNode
+  inventoryById(inventoryId: ID): InventoryType
+  allInventories: [InventoryType]
+  getReconciliationById(reconciliationId: ID): ReconciliationType
+  allReconciliations: [ReconciliationType]
+  allSalesExecutives: [SalesExecutiveType]
+  allRequests: [RequestType]
+  allShops: [ShopType]
+  priceGroups: [PriceGroupType]
+  allRoutes: [RouteType]
+  productTypeById(productTypeId: ID): ProductTypeType
+  allProductTypes: [ProductTypeType]
+  productBySku(productSku: String): RealProductType
+  allProducts: [RealProductType]
+  categoryById(categoryId: ID): CategoryType
+  allCategories: [CategoryType]
+  getAllUsers: [UserType]
+}
+
+type RealProductType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  productType: ProductTypeType
+  category: CategoryType
+  name: String!
+  sku: String!
+  shelfLife: Int!
+  basePrice: Decimal!
+  sellingPrice: Decimal!
+  mrpPrice: Decimal!
+  unit: ProductUnit!
+  weight: String!
+  isActive: Boolean!
+  isDeleted: Boolean!
+  parent: RealProductType
+  lft: Int!
+  rght: Int!
+  treeId: Int!
+  level: Int!
+  groupBasedProduct(offset: Int, before: String, after: String, first: Int, last: Int): GroupBasedPriceTypeConnection!
+  productSet(offset: Int, before: String, after: String, first: Int, last: Int): RealProductTypeConnection!
+  inventoryProduct(offset: Int, before: String, after: String, first: Int, last: Int): InventoryTypeConnection!
+  reconciliationItemProduct: [ReconciliationItemType!]!
+  orderitemSet(offset: Int, before: String, after: String, first: Int, last: Int): OrderItemNodeConnection!
+}
+
+type RealProductTypeConnection {
+  pageInfo: PageInfo!
+  edges: [RealProductTypeEdge]!
+}
+
+type RealProductTypeEdge {
+  node: RealProductType
+  cursor: String!
+}
+
+enum ReconciliationItemReconciliationProductType {
+  USABLE
+  DAMAGE
+}
+
+type ReconciliationItemType {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  reconciliationProductType: ReconciliationItemReconciliationProductType!
+  reconciliation: ReconciliationType!
+  product: RealProductType!
+  inventory: InventoryType
+  quantity: Int!
+  price: Decimal!
+  transaction: TransactionType
+}
+
+enum ReconciliationReconciliationType {
+  VOID
+  REFUND
+  CREDIT
+}
+
+type ReconciliationType {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  shop: ShopType!
+  salesExecutive: SalesExecutiveType!
+  reconciliationType: ReconciliationReconciliationType!
+  reconciliationDate: DateTime!
+  relatedReconciliation: [ReconciliationItemType!]!
+}
+
+type Refresh {
+  payload: GenericScalar!
+  refreshExpiresIn: Int!
+  token: String!
+  refreshToken: String!
+}
+
+enum RequestStatus {
+  PENDING
+  HOLD
+  FAILED
+  COMPLETED
+}
+
+type RequestType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  salesExecutive: SalesExecutiveType!
+  shop: ShopType!
+  requestedDate: DateTime!
+  dueDate: DateTime!
+  status: RequestStatus!
+  isActive: Boolean!
+  isDeleted: Boolean!
+}
+
+type RequestTypeConnection {
+  pageInfo: PageInfo!
+  edges: [RequestTypeEdge]!
+}
+
+type RequestTypeEdge {
+  node: RequestType
+  cursor: String!
+}
+
+input RequestedProductsInput {
+  productId: String!
+  quantity: Int!
+}
+
+type Revoke {
+  revoked: Int!
+}
+
+type RouteType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  startingPoint: String!
+  endingPoint: String!
+  description: String
+  isActive: Boolean!
+  permanentRoute(offset: Int, before: String, after: String, first: Int, last: Int): SalesExecutiveTypeConnection!
+  temporaryRoute(offset: Int, before: String, after: String, first: Int, last: Int): SalesExecutiveTypeConnection!
+}
+
+type SalesExecutiveType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  user: UserType!
+  dateOfBirth: Date
+  vehicleNumber: String
+  permanentRoute: RouteType
+  temporaryRoute: RouteType
+  isActive: Boolean!
+  isDeleted: Boolean!
+  inventorySalesExecutive(offset: Int, before: String, after: String, first: Int, last: Int): InventoryTypeConnection!
+  requestSalesExecutive(offset: Int, before: String, after: String, first: Int, last: Int): RequestTypeConnection!
+  reconSalesExecutive: [ReconciliationType!]!
+  orders(offset: Int, before: String, after: String, first: Int, last: Int): OrderNodeConnection!
+}
+
+type SalesExecutiveTypeConnection {
+  pageInfo: PageInfo!
+  edges: [SalesExecutiveTypeEdge]!
+}
+
+type SalesExecutiveTypeEdge {
+  node: SalesExecutiveType
+  cursor: String!
+}
+
+type ShopType implements Node {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  priceGroup: PriceGroupType!
+  name: String!
+  gstNumber: String
+  phoneNumber: String!
+  wallet: Decimal!
+  totalCreditLimit: Decimal!
+  totalCredit: Decimal!
+  isChain: Boolean!
+  isDeleted: Boolean!
+  isParent: Boolean!
+  isActive: Boolean!
+  parent: ShopType
+  lft: Int!
+  rght: Int!
+  treeId: Int!
+  level: Int!
+  children(offset: Int, before: String, after: String, first: Int, last: Int): ShopTypeConnection!
+  requestShop(offset: Int, before: String, after: String, first: Int, last: Int): RequestTypeConnection!
+  reconciliationSet: [ReconciliationType!]!
+  orders(offset: Int, before: String, after: String, first: Int, last: Int): OrderNodeConnection!
+}
+
+type ShopTypeConnection {
+  pageInfo: PageInfo!
+  edges: [ShopTypeEdge]!
+}
+
+type ShopTypeEdge {
+  node: ShopType
+  cursor: String!
+}
+
+enum TransactionTransactionType {
+  CREDIT
+  DEBIT
+}
+
+type TransactionType {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  transactionType: TransactionTransactionType!
+  amount: Decimal!
+  reconciliationItemTransaction: [ReconciliationItemType!]!
+}
+
+type UpdateCategory {
+  category: CategoryType
+}
+
+type UpdateOrderItem {
+  order: OrderNode
+  status: String
+  message: String
+  creditAvailability: [CreditAvailabilityResponseType]
+}
+
+type UpdateProduct {
+  product: RealProductType
+}
+
+type UpdateProductType {
+  productType: ProductTypeType
+}
+
+type UpdateSalesExecutive {
+  status: String
+  message: String
+}
+
+type UpdateShop {
+  status: String
+  message: String
+}
+
+type UserType implements Node {
+  id: ID!
+  lastLogin: DateTime
+  isSuperuser: Boolean!
+  username: String!
+  firstName: String!
+  lastName: String!
+  email: String!
+  isStaff: Boolean!
+  isActive: Boolean!
+  dateJoined: DateTime!
+  mobileNumber: String!
+  isManager: Boolean!
+  isAdmin: Boolean!
+  jti: String!
+  salesexecutive: SalesExecutiveType
+}
+
+type Verify {
+  payload: GenericScalar!
+}

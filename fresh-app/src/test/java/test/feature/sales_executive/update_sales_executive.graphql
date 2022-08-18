@@ -1,0 +1,6 @@
+mutation UpdateSalesExecutive($salesExecutiveId:ID!, $dateOfBirth:Date, $isActive:Boolean, $vehicleNumber:String){
+    updateSalesExecutive(salesExecutiveId: $salesExecutiveId, dateOfBirth: $dateOfBirth, isActive: $isActive, vehicleNumber: $vehicleNumber){
+        status
+        message
+    }
+}
