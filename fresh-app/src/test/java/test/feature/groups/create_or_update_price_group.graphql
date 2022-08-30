@@ -1,0 +1,8 @@
+mutation CreateOrUpdatePriceGroup($name:String!,$groupBasedPrices:[GroupBasedPricesInput!], $isActive:Boolean){
+    createUpdatePriceGroup(name:$name, groupBasedPrices:$groupBasedPrices, isActive:$isActive){
+        status
+        message
+        invalidSku
+        invalidSellingPrice
+    }
+}

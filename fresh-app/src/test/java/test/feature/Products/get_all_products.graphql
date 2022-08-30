@@ -1,0 +1,6 @@
+query ViewAllProducts{
+    allProducts {
+        id
+        name
+    }
+}

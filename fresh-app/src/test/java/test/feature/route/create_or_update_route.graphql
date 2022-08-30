@@ -1,0 +1,6 @@
+mutation CreateUpdateRoute($name:String!, $startingPoint:String!, $endingPoint:String!, $isActive:Boolean, $description:String){
+    createUpdateRoute(name: $name,startingPoint: $startingPoint, endingPoint: $endingPoint, isActive: $isActive, description: $description){
+        status
+        message
+    }
+}

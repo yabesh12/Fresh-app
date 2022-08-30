@@ -1,0 +1,9 @@
+query ViewAllRoutes{
+    allRoutes {
+        id
+        name
+        startingPoint
+        endingPoint
+        description
+    }
+}

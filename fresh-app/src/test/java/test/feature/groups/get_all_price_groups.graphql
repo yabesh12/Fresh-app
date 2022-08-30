@@ -1,0 +1,21 @@
+query GetAllPriceGroups{
+    priceGroups {
+        id
+        name
+        groupbasedpriceSet{
+            edges {
+                node {
+                    id
+                    sellingPrice
+                    discountSellingPrice
+                    product {
+                        id
+                        name
+                        isActive
+                        isDeleted
+                    }
+                }
+            }
+        }
+    }
+}
