@@ -1,0 +1,12 @@
+mutation CreateOrder($data:OrderInput!){
+  createOrder(data: $data){
+    creditAvailability{
+      categoryId
+      creditLimit
+      categoryName
+      creditAvailable
+    }
+    message
+    status
+  }
+}

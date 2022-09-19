@@ -1,0 +1,12 @@
+mutation ApplyWalletAmount($orderId:ID!, $shopId:ID!, $amount:Decimal!){
+	applyWalletAmount(orderId:$orderId, shopId:$shopId, amount:$amount){
+		order{
+			id
+			isPaid
+			isActive
+			discount
+		}
+		status
+		message
+	}
+}

@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("025e6c13-d0b6-4b26-bb76-549ce7537384",{name:"yabesh"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>test.test_features.accounts.registration</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">5</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-09-15 12:23:21 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:7]"><span>[1:7]</span> <span>user registration with existing user credentials</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:16]"><span>[2:16]</span> <span>user registration using invalid phone number</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:25]"><span>[3:25]</span> <span>user registration using invalid email</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4:35]"><span>[4:35]</span> <span>user registration with password mismatch</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5:44]"><span>[5:44]</span> <span>user registration with valid data</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">test/test_features/accounts/registration.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">User Registration Test</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:7]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">debug</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:7]</span>
+                <span class="scenario-name">user registration with existing user credentials</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>15</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:7]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:7]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:8009/graphql/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;registration.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def variables = { username: testuser, mobileNumber:9999999999, password1:test, password2:test}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query:&#39;#(query)&#39;,variables:&quot;#(variables)&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">12:23:20.963 request:
+1 &gt; POST http://localhost:8009/graphql/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 374
+1 &gt; Host: localhost:8009
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;mutation SignUp($username:String!, $password1:String!, $password2:String!, $mobileNumber:String!, $email:String){\n  signUp(username:$username,password1:$password1, password2:$password2, mobileNumber:$mobileNumber, email:$email){\n    status\n    message\n  }\n}&quot;,&quot;variables&quot;:{&quot;username&quot;:&quot;testuser&quot;,&quot;mobileNumber&quot;:9999999999,&quot;password1&quot;:&quot;test&quot;,&quot;password2&quot;:&quot;test&quot;}}
+
+12:23:20.977 response time in milliseconds: 12
+1 &lt; 200
+1 &lt; Date: Thu, 15 Sep 2022 06:53:20 GMT
+1 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Cookie
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Length: 127
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Referrer-Policy: same-origin
+1 &lt; Set-Cookie: csrftoken=HxAeRnsdBCoZJ1sGjoXEw3kFfYXIGddrRcB4dk7aeVD3nE3e2Cal80u7Z5g9rIsa; Max-Age=1694674400000; Expires=Thu, 19 Oct 55724 07:46:40 GMT; Domain=localhost
+{&quot;errors&quot;:[{&quot;message&quot;:&quot;Username Already exists&quot;,&quot;locations&quot;:[{&quot;line&quot;:2,&quot;column&quot;:3}],&quot;path&quot;:[&quot;signUp&quot;]}],&quot;data&quot;:{&quot;signUp&quot;:null}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match response.errors[0].message == &#39;Username Already exists&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:16]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">debug</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:16]</span>
+                <span class="scenario-name">user registration using invalid phone number</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>14</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:16]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:16]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:8009/graphql/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;registration.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def variables = { username: defaultuser1, mobileNumber:8888, password1:test, password2:test}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query:&#39;#(query)&#39;,variables:&quot;#(variables)&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.21">12:23:20.980 request:
+1 &gt; POST http://localhost:8009/graphql/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 372
+1 &gt; Host: localhost:8009
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;mutation SignUp($username:String!, $password1:String!, $password2:String!, $mobileNumber:String!, $email:String){\n  signUp(username:$username,password1:$password1, password2:$password2, mobileNumber:$mobileNumber, email:$email){\n    status\n    message\n  }\n}&quot;,&quot;variables&quot;:{&quot;username&quot;:&quot;defaultuser1&quot;,&quot;mobileNumber&quot;:8888,&quot;password1&quot;:&quot;test&quot;,&quot;password2&quot;:&quot;test&quot;}}
+
+12:23:20.993 response time in milliseconds: 13
+1 &lt; 200
+1 &lt; Date: Thu, 15 Sep 2022 06:53:20 GMT
+1 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Cookie
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Length: 137
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Referrer-Policy: same-origin
+1 &lt; Set-Cookie: csrftoken=FpM8VCg6o130aoeemnAoLPY3skUWuzOlaOarMajBfHqmb5Ceh9Nh43lmEsIf1hMq; Max-Age=1694674400000; Expires=Thu, 19 Oct 55724 07:46:40 GMT; Domain=localhost
+{&quot;errors&quot;:[{&quot;message&quot;:&quot;Please enter a valid phone number&quot;,&quot;locations&quot;:[{&quot;line&quot;:2,&quot;column&quot;:3}],&quot;path&quot;:[&quot;signUp&quot;]}],&quot;data&quot;:{&quot;signUp&quot;:null}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match response.errors[0].message == &#39;Please enter a valid phone number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:25]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">debug</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:25]</span>
+                <span class="scenario-name">user registration using invalid email</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>20</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:25]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:25]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:8009/graphql/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;registration.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def variables = { username: defaultuser4, mobileNumber:8659497948,email:test@,password1:test, password2:test}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query:&#39;#(query)&#39;,variables:&quot;#(variables)&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.30">12:23:20.997 request:
+1 &gt; POST http://localhost:8009/graphql/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 394
+1 &gt; Host: localhost:8009
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;mutation SignUp($username:String!, $password1:String!, $password2:String!, $mobileNumber:String!, $email:String){\n  signUp(username:$username,password1:$password1, password2:$password2, mobileNumber:$mobileNumber, email:$email){\n    status\n    message\n  }\n}&quot;,&quot;variables&quot;:{&quot;username&quot;:&quot;defaultuser4&quot;,&quot;mobileNumber&quot;:8659497948,&quot;email&quot;:&quot;test@&quot;,&quot;password1&quot;:&quot;test&quot;,&quot;password2&quot;:&quot;test&quot;}}
+
+12:23:21.013 response time in milliseconds: 16
+1 &lt; 200
+1 &lt; Date: Thu, 15 Sep 2022 06:53:21 GMT
+1 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Cookie
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Length: 136
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Referrer-Policy: same-origin
+1 &lt; Set-Cookie: csrftoken=cKTtTDuEbye7n8ngNQObAgRLnGDKbyIReomJhHBBCbnorPh9qwuEj27H9mmJWsQ3; Max-Age=1694674401000; Expires=Thu, 19 Oct 55724 08:03:21 GMT; Domain=localhost
+{&quot;errors&quot;:[{&quot;message&quot;:&quot;[&#39;Enter a valid email address.&#39;]&quot;,&quot;locations&quot;:[{&quot;line&quot;:2,&quot;column&quot;:3}],&quot;path&quot;:[&quot;signUp&quot;]}],&quot;data&quot;:{&quot;signUp&quot;:null}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match response.errors[0].message == &quot;[&#39;Enter a valid email address.&#39;]&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:35]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">debug</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:35]</span>
+                <span class="scenario-name">user registration with password mismatch</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>21</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:35]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:8009/graphql/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;registration.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def variables = { username: defaultuser5, mobileNumber:8787848787, password1:test, password2:testt}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query:&#39;#(query)&#39;,variables:&quot;#(variables)&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">21</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.40">12:23:21.019 request:
+1 &gt; POST http://localhost:8009/graphql/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 379
+1 &gt; Host: localhost:8009
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;mutation SignUp($username:String!, $password1:String!, $password2:String!, $mobileNumber:String!, $email:String){\n  signUp(username:$username,password1:$password1, password2:$password2, mobileNumber:$mobileNumber, email:$email){\n    status\n    message\n  }\n}&quot;,&quot;variables&quot;:{&quot;username&quot;:&quot;defaultuser5&quot;,&quot;mobileNumber&quot;:8787848787,&quot;password1&quot;:&quot;test&quot;,&quot;password2&quot;:&quot;testt&quot;}}
+
+12:23:21.039 response time in milliseconds: 20
+1 &lt; 200
+1 &lt; Date: Thu, 15 Sep 2022 06:53:21 GMT
+1 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Cookie
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Length: 145
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Referrer-Policy: same-origin
+1 &lt; Set-Cookie: csrftoken=wpmssYfx3Mt71gX3bXNWU3b1odl3deEktEZZzTPjZyYYfU4MHvFk4XOgWWQUNv6V; Max-Age=1694674401000; Expires=Thu, 19 Oct 55724 08:03:21 GMT; Domain=localhost
+{&quot;errors&quot;:[{&quot;message&quot;:&quot;Password does not match please try again.&quot;,&quot;locations&quot;:[{&quot;line&quot;:2,&quot;column&quot;:3}],&quot;path&quot;:[&quot;signUp&quot;]}],&quot;data&quot;:{&quot;signUp&quot;:null}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match response.errors[0].message == &#39;Password does not match please try again.&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:44]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">debug</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:44]</span>
+                <span class="scenario-name">user registration with valid data</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>14</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5:44]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5:44]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:8009/graphql/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.45">
+      <div class="step-ref passed">45</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;registration.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def variables = { username: defaultuser, mobileNumber:9696969696, email:test@gmail.com, password1:test, password2:test}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query:&#39;#(query)&#39;,variables:&quot;#(variables)&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.49">12:23:21.043 request:
+1 &gt; POST http://localhost:8009/graphql/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 402
+1 &gt; Host: localhost:8009
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;mutation SignUp($username:String!, $password1:String!, $password2:String!, $mobileNumber:String!, $email:String){\n  signUp(username:$username,password1:$password1, password2:$password2, mobileNumber:$mobileNumber, email:$email){\n    status\n    message\n  }\n}&quot;,&quot;variables&quot;:{&quot;username&quot;:&quot;defaultuser&quot;,&quot;mobileNumber&quot;:9696969696,&quot;email&quot;:&quot;test@gmail.com&quot;,&quot;password1&quot;:&quot;test&quot;,&quot;password2&quot;:&quot;test&quot;}}
+
+12:23:21.056 response time in milliseconds: 12
+1 &lt; 200
+1 &lt; Date: Thu, 15 Sep 2022 06:53:21 GMT
+1 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Cookie
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Length: 127
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Referrer-Policy: same-origin
+1 &lt; Set-Cookie: csrftoken=AigmONrlIqmPjpBjgi9eXr6jtZoxWwdvJUEmhum2UjH2eHxzBs4K3G3tpibNJ9Ng; Max-Age=1694674401000; Expires=Thu, 19 Oct 55724 08:03:21 GMT; Domain=localhost
+{&quot;errors&quot;:[{&quot;message&quot;:&quot;Username Already exists&quot;,&quot;locations&quot;:[{&quot;line&quot;:2,&quot;column&quot;:3}],&quot;path&quot;:[&quot;signUp&quot;]}],&quot;data&quot;:{&quot;signUp&quot;:null}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

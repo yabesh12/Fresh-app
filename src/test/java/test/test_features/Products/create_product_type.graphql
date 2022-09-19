@@ -1,0 +1,10 @@
+mutation CreateProductType($title:String!,$unit:String!,$isActive:Boolean!,$isCreditAvailable:Boolean!, $tax:Decimal!, $parentId:ID){
+    createProductType(title: $title, unit:$unit, isActive: $isActive, isCreditAvailable: $isCreditAvailable, tax: $tax, parentId: $parentId){
+        productType {
+            id
+            title
+            tax
+            isCreditAvailable
+        }
+    }
+}

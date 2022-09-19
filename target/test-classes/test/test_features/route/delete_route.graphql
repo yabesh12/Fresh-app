@@ -1,0 +1,6 @@
+mutation DeleteRoute($routeId:ID!){
+  deleteRoute(routeId: $routeId){
+      status
+      message
+  }
+}

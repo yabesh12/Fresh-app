@@ -1,0 +1,24 @@
+mutation CreateReconciliation($productSku:String!, $quantity:Int!, $reconciliationProductType:String!, $reconciliationType:String!, $shopId:ID!){
+    createReconciliation(productSku:$productSku, quantity:$quantity, reconciliationProductType:$reconciliationProductType, reconciliationType:$reconciliationType, shopId:$shopId){
+        reconciliation {
+            id
+            reconciliationDate
+            reconciliationType
+            shop {
+                id
+                name
+                priceGroup {
+                    id
+                    name
+                }
+            }
+            salesExecutive {
+                id
+                user {
+                    id
+                    username
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+mutation CreateProductType($name:String!,$isActive:Boolean,$parentId:ID, $productTypeId:ID){
+    createCategory(name: $name, isActive:$isActive, parentId: $parentId, productTypeId: $productTypeId){
+        category {
+            id
+            name
+            isActive
+            isDeleted
+        }
+    }
+}

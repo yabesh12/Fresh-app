@@ -1,0 +1,16 @@
+mutation DropOrderItem($orderId:ID!, $orderItemIds:[ID]!){
+	dropOrderItem(orderId: $orderId, orderItemIds: $orderItemIds){
+		order{
+			id
+			isPaid
+			isActive
+			discount
+			status
+			billedTo{
+				id
+				name
+				phoneNumber
+			}
+		}
+	}
+}

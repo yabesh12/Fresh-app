@@ -1,0 +1,6 @@
+mutation CreateSalesExecutive($name:String!, $mobileNumber:String!, $password1:String!, $password2:String!,$vehicleNumber:String, $dateOfBirth:Date){
+    createSalesExecutive(name: $name, mobileNumber: $mobileNumber,password1: $password1,password2: $password2, vehicleNumber: $vehicleNumber, dateOfBirth: $dateOfBirth){
+        status
+        message
+    }
+}

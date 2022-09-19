@@ -1,0 +1,14 @@
+mutation UpdateProductCategory($categoryId:ID!, $isActive:Boolean, $name:String, $parentId:ID, $productTypeId:ID){
+    updateCategory(categoryId: $categoryId, isActive: $isActive, name: $name, parentId: $parentId, productTypeId: $productTypeId){
+        category {
+            id
+            name
+            isActive
+            isDeleted
+            productType {
+                id
+                title
+            }
+        }
+    }
+}

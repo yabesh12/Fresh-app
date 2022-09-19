@@ -1,0 +1,8 @@
+query GetSingleRoute($routeId:ID!){
+    getRoute(routeId:$routeId){
+        id
+        name
+        startingPoint
+        endingPoint
+    }
+}

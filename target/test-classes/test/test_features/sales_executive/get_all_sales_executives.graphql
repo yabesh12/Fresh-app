@@ -1,0 +1,16 @@
+query GetAllSalesExecutives{
+    allSalesExecutives {
+        id
+        vehicleNumber
+        isActive
+        isDeleted
+        user{
+            id
+            firstName
+            lastName
+            username
+            email
+            mobileNumber
+        }
+    }
+}

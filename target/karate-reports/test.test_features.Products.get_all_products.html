@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("025e6c13-d0b6-4b26-bb76-549ce7537384",{name:"yabesh"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>test.test_features.Products.get_all_products</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">2</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-09-15 12:23:18 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:10]"><span>[1:10]</span> <span>View all products without login</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:18]"><span>[2:18]</span> <span>View all products with login</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">test/test_features/Products/get_all_products.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">View All Products Test</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:10]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">debug</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:10]</span>
+                <span class="scenario-name">View all products without login</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>7</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:10]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:8009/graphql/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = &quot;&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;get_all_products.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query: &#39;#(query)&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">5</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">12:23:17.845 request:
+1 &gt; POST http://localhost:8009/graphql/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 89
+1 &gt; Host: localhost:8009
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;query ViewAllProducts{\n    allProducts {\n        id\n        name\n    }\n}&quot;}
+
+12:23:17.849 response time in milliseconds: 4
+1 &lt; 200
+1 &lt; Date: Thu, 15 Sep 2022 06:53:17 GMT
+1 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Cookie
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Length: 163
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Referrer-Policy: same-origin
+1 &lt; Set-Cookie: csrftoken=3M9T7cfiVYUwG3RvEp6uw8JtasdOAoGpf8rVSFR3pne0J7IeD9sCe4owhJ0qTNdn; Max-Age=1694674397000; Expires=Thu, 19 Oct 55724 06:56:37 GMT; Domain=localhost
+{&quot;errors&quot;:[{&quot;message&quot;:&quot;You do not have permission to perform this action&quot;,&quot;locations&quot;:[{&quot;line&quot;:2,&quot;column&quot;:5}],&quot;path&quot;:[&quot;allProducts&quot;]}],&quot;data&quot;:{&quot;allProducts&quot;:null}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match response.errors[0].message == &#39;You do not have permission to perform this action&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:18]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">debug</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:18]</span>
+                <span class="scenario-name">View all products with login</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>176</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:18]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;http://localhost:8009/graphql/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:18]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = &quot;&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># login</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;../accounts/login.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def variables = {username:defaultuser3, password:test}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query:&#39;#(query)&#39;,variables:&quot;#(variables)&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">156</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.24">12:23:17.854 request:
+1 &gt; POST http://localhost:8009/graphql/
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 252
+1 &gt; Host: localhost:8009
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;mutation Login($username:String!, $password:String!){\n    tokenAuth(username:$username, password:$password){\n        token\n        refreshToken\n        refreshExpiresIn\n    }\n}&quot;,&quot;variables&quot;:{&quot;username&quot;:&quot;defaultuser3&quot;,&quot;password&quot;:&quot;test&quot;}}
+
+12:23:18.009 response time in milliseconds: 155
+1 &lt; 200
+1 &lt; Date: Thu, 15 Sep 2022 06:53:18 GMT
+1 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Cookie
+1 &lt; X-Frame-Options: DENY
+1 &lt; Content-Length: 388
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; Referrer-Policy: same-origin
+1 &lt; Set-Cookie: csrftoken=W7wLYsDeVzY36CgmceaTLQXURmc7yDNLyyUmuMuGMCPwgpVUMImBbJt4vZeg7ujR; Max-Age=1694674398000; Expires=Thu, 19 Oct 55724 07:13:18 GMT; Domain=localhost
+{&quot;data&quot;:{&quot;tokenAuth&quot;:{&quot;token&quot;:&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZmF1bHR1c2VyMyIsImV4cCI6MTY2MzIyODM5Nywib3JpZ0lhdCI6MTY2MzIyNDc5NywianRpIjoiM2E4NTFmYzBjMDA4MmRiOGMzZmQzZTZhYjk4ZTg3YzQ4YzQ3OWQ5M2U4YjkxMWM3MDI1MmYyYzI0ODZkYmE2NCJ9.4VNBnEHaQB2W1IHRvnSkcQJFotitrFnaeZgwXMBxBFI&quot;,&quot;refreshToken&quot;:&quot;57d1c8d2bc3342f11f0cc44cb0332245706ffe56&quot;,&quot;refreshExpiresIn&quot;:1663829597}}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Get all products</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def token = response.data.tokenAuth.token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &quot;JWT&quot;+&quot; &quot;+token</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def query = read(&#39;get_all_products.graphql&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {query:&#39;#(query)&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">18</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.32">12:23:18.011 request:
+2 &gt; POST http://localhost:8009/graphql/
+2 &gt; Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZmF1bHR1c2VyMyIsImV4cCI6MTY2MzIyODM5Nywib3JpZ0lhdCI6MTY2MzIyNDc5NywianRpIjoiM2E4NTFmYzBjMDA4MmRiOGMzZmQzZTZhYjk4ZTg3YzQ4YzQ3OWQ5M2U4YjkxMWM3MDI1MmYyYzI0ODZkYmE2NCJ9.4VNBnEHaQB2W1IHRvnSkcQJFotitrFnaeZgwXMBxBFI
+2 &gt; Cookie: csrftoken=W7wLYsDeVzY36CgmceaTLQXURmc7yDNLyyUmuMuGMCPwgpVUMImBbJt4vZeg7ujR
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Content-Length: 89
+2 &gt; Host: localhost:8009
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18.0.2-ea)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;query&quot;:&quot;query ViewAllProducts{\n    allProducts {\n        id\n        name\n    }\n}&quot;}
+
+12:23:18.028 response time in milliseconds: 17
+2 &lt; 200
+2 &lt; Date: Thu, 15 Sep 2022 06:53:18 GMT
+2 &lt; Server: WSGIServer/0.2 CPython/3.10.6
+2 &lt; Content-Type: application/json
+2 &lt; Vary: Cookie
+2 &lt; X-Frame-Options: DENY
+2 &lt; Content-Length: 240
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; Referrer-Policy: same-origin
+2 &lt; Set-Cookie: csrftoken=W7wLYsDeVzY36CgmceaTLQXURmc7yDNLyyUmuMuGMCPwgpVUMImBbJt4vZeg7ujR; Max-Age=1694674398000; Expires=Thu, 19 Oct 55724 07:13:18 GMT; Domain=localhost
+{&quot;data&quot;:{&quot;allProducts&quot;:[{&quot;id&quot;:&quot;UmVhbFByb2R1Y3RUeXBlOjEx&quot;,&quot;name&quot;:&quot;Dosa Batter&quot;},{&quot;id&quot;:&quot;UmVhbFByb2R1Y3RUeXBlOjM=&quot;,&quot;name&quot;:&quot;dosa batter&quot;},{&quot;id&quot;:&quot;UmVhbFByb2R1Y3RUeXBlOjI=&quot;,&quot;name&quot;:&quot;Cool Drink&quot;},{&quot;id&quot;:&quot;UmVhbFByb2R1Y3RUeXBlOjE=&quot;,&quot;name&quot;:&quot;Batter&quot;}]}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match response.data.allProducts[0].name == &#39;Dosa Batter&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,14 @@
+mutation CreateProduct($sku:String!, $name:String!, $basePrice:Decimal!, $unit:String!, $mrpPrice:Decimal!, $sellingPrice:Decimal!, $shelfLife:Int!, $weight:String!, $isActive:Boolean, $categoryId:ID, $parentId:ID, $productTypeId:ID,  ){
+    createProduct(sku: $sku, name: $name, basePrice: $basePrice, unit: $unit, mrpPrice: $mrpPrice, sellingPrice: $sellingPrice, shelfLife:$shelfLife, weight: $weight, isActive: $isActive, categoryId: $categoryId, parentId: $parentId, productTypeId: $productTypeId){
+        product {
+            id
+            sku
+            name
+            mrpPrice
+            basePrice
+            sellingPrice
+            shelfLife
+            unit
+        }message
+    }
+}

@@ -1,0 +1,6 @@
+mutation DeletePriceGroup($priceGroupId:ID!){
+    deletePriceGroup(priceGroupId: $priceGroupId){
+        status
+        message
+    }
+}

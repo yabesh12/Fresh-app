@@ -1,0 +1,21 @@
+mutation UpdateOrderItem($orderId:ID!, $orderItem:OrderItemInput!,$shopId:ID! ){
+	updateOrderItem(orderId:$orderId, orderItem:$orderItem, shopId:$shopId){
+		order{
+			id
+			discount
+			status
+			total
+			billedTo{
+				id
+				name
+				isActive
+				isDeleted
+				totalCredit
+				totalCreditLimit
+				wallet
+			}
+		}
+		status
+		message
+	}
+}

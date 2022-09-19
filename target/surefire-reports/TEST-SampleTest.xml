@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="SampleTest" time="17.934" tests="95" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="18"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test/target/test-classes:/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test/target/classes:/home/yabesh/.m2/repository/com/intuit/karate/karate-junit5/1.2.0/karate-junit5-1.2.0.jar:/home/yabesh/.m2/repository/com/intuit/karate/karate-core/1.2.0/karate-core-1.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/js/js-scriptengine/21.2.0/js-scriptengine-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/sdk/graal-sdk/21.2.0/graal-sdk-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/js/js/21.2.0/js-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/regex/regex/21.2.0/regex-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/truffle/truffle-api/21.2.0/truffle-api-21.2.0.jar:/home/yabesh/.m2/repository/com/ibm/icu/icu4j/69.1/icu4j-69.1.jar:/home/yabesh/.m2/repository/org/thymeleaf/thymeleaf/3.0.14.RELEASE/thymeleaf-3.0.14.RELEASE.jar:/home/yabesh/.m2/repository/ognl/ognl/3.1.26/ognl-3.1.26.jar:/home/yabesh/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/yabesh/.m2/repository/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar:/home/yabesh/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar:/home/yabesh/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/yabesh/.m2/repository/com/linecorp/armeria/armeria/1.13.4/armeria-1.13.4.jar:/home/yabesh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar:/home/yabesh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar:/home/yabesh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar:/home/yabesh/.m2/repository/io/micrometer/micrometer-core/1.7.6/micrometer-core-1.7.6.jar:/home/yabesh/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/yabesh/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/yabesh/.m2/repository/io/netty/netty-transport/4.1.70.Final/netty-transport-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-common/4.1.70.Final/netty-common-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-buffer/4.1.70.Final/netty-buffer-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver/4.1.70.Final/netty-resolver-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-http2/4.1.70.Final/netty-codec-http2-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec/4.1.70.Final/netty-codec-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-handler/4.1.70.Final/netty-handler-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-http/4.1.70.Final/netty-codec-http-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-haproxy/4.1.70.Final/netty-codec-haproxy-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver-dns/4.1.70.Final/netty-resolver-dns-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-dns/4.1.70.Final/netty-codec-dns-4.1.70.Final.jar:/home/yabesh/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/yabesh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.70.Final/netty-resolver-dns-native-macos-4.1.70.Final-osx-x86_64.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.70.Final/netty-resolver-dns-classes-macos-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.70.Final/netty-transport-native-unix-common-4.1.70.Final-linux-x86_64.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-native-epoll/4.1.70.Final/netty-transport-native-epoll-4.1.70.Final-linux-x86_64.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.70.Final/netty-transport-native-unix-common-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.70.Final/netty-transport-classes-epoll-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.44.Final/netty-tcnative-boringssl-static-2.0.44.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-handler-proxy/4.1.70.Final/netty-handler-proxy-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-socks/4.1.70.Final/netty-codec-socks-4.1.70.Final.jar:/home/yabesh/.m2/repository/com/aayushatharva/brotli4j/brotli4j/1.6.0/brotli4j-1.6.0.jar:/home/yabesh/.m2/repository/com/aayushatharva/brotli4j/native-linux-x86_64/1.6.0/native-linux-x86_64-1.6.0.jar:/home/yabesh/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/yabesh/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/yabesh/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/yabesh/.m2/repository/ch/qos/logback/logback-classic/1.2.9/logback-classic-1.2.9.jar:/home/yabesh/.m2/repository/ch/qos/logback/logback-core/1.2.9/logback-core-1.2.9.jar:/home/yabesh/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.32/jcl-over-slf4j-1.7.32.jar:/home/yabesh/.m2/repository/org/antlr/antlr4-runtime/4.9.2/antlr4-runtime-4.9.2.jar:/home/yabesh/.m2/repository/com/jayway/jsonpath/json-path/2.7.0/json-path-2.7.0.jar:/home/yabesh/.m2/repository/net/minidev/json-smart/2.4.7/json-smart-2.4.7.jar:/home/yabesh/.m2/repository/net/minidev/accessors-smart/2.4.7/accessors-smart-2.4.7.jar:/home/yabesh/.m2/repository/org/ow2/asm/asm/9.1/asm-9.1.jar:/home/yabesh/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/home/yabesh/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/home/yabesh/.m2/repository/org/yaml/snakeyaml/1.29/snakeyaml-1.29.jar:/home/yabesh/.m2/repository/de/siegmar/fastcsv/2.0.0/fastcsv-2.0.0.jar:/home/yabesh/.m2/repository/info/picocli/picocli/4.6.1/picocli-4.6.1.jar:/home/yabesh/.m2/repository/io/github/classgraph/classgraph/4.8.108/classgraph-4.8.108.jar:/home/yabesh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.2/junit-jupiter-api-5.7.2.jar:/home/yabesh/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/yabesh/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/yabesh/.m2/repository/org/junit/platform/junit-platform-commons/1.7.2/junit-platform-commons-1.7.2.jar:/home/yabesh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.2/junit-jupiter-engine-5.7.2.jar:/home/yabesh/.m2/repository/org/junit/platform/junit-platform-engine/1.7.2/junit-platform-engine-1.7.2.jar:"/>
+    <property name="java.vm.vendor" value="Private Build"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="Unknown"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="18"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-18-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test/target/surefire/surefirebooter10486948228311761391.jar /home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test/target/surefire 2022-09-15T12-23-10_575-jvmRun1 surefire13199204433550867329tmp surefire_013674122398412923443tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test/target/test-classes:/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test/target/classes:/home/yabesh/.m2/repository/com/intuit/karate/karate-junit5/1.2.0/karate-junit5-1.2.0.jar:/home/yabesh/.m2/repository/com/intuit/karate/karate-core/1.2.0/karate-core-1.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/js/js-scriptengine/21.2.0/js-scriptengine-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/sdk/graal-sdk/21.2.0/graal-sdk-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/js/js/21.2.0/js-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/regex/regex/21.2.0/regex-21.2.0.jar:/home/yabesh/.m2/repository/org/graalvm/truffle/truffle-api/21.2.0/truffle-api-21.2.0.jar:/home/yabesh/.m2/repository/com/ibm/icu/icu4j/69.1/icu4j-69.1.jar:/home/yabesh/.m2/repository/org/thymeleaf/thymeleaf/3.0.14.RELEASE/thymeleaf-3.0.14.RELEASE.jar:/home/yabesh/.m2/repository/ognl/ognl/3.1.26/ognl-3.1.26.jar:/home/yabesh/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/yabesh/.m2/repository/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar:/home/yabesh/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar:/home/yabesh/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/yabesh/.m2/repository/com/linecorp/armeria/armeria/1.13.4/armeria-1.13.4.jar:/home/yabesh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar:/home/yabesh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar:/home/yabesh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar:/home/yabesh/.m2/repository/io/micrometer/micrometer-core/1.7.6/micrometer-core-1.7.6.jar:/home/yabesh/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/home/yabesh/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/home/yabesh/.m2/repository/io/netty/netty-transport/4.1.70.Final/netty-transport-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-common/4.1.70.Final/netty-common-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-buffer/4.1.70.Final/netty-buffer-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver/4.1.70.Final/netty-resolver-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-http2/4.1.70.Final/netty-codec-http2-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec/4.1.70.Final/netty-codec-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-handler/4.1.70.Final/netty-handler-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-http/4.1.70.Final/netty-codec-http-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-haproxy/4.1.70.Final/netty-codec-haproxy-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver-dns/4.1.70.Final/netty-resolver-dns-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-dns/4.1.70.Final/netty-codec-dns-4.1.70.Final.jar:/home/yabesh/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/yabesh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.70.Final/netty-resolver-dns-native-macos-4.1.70.Final-osx-x86_64.jar:/home/yabesh/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.70.Final/netty-resolver-dns-classes-macos-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.70.Final/netty-transport-native-unix-common-4.1.70.Final-linux-x86_64.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-native-epoll/4.1.70.Final/netty-transport-native-epoll-4.1.70.Final-linux-x86_64.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.70.Final/netty-transport-native-unix-common-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.70.Final/netty-transport-classes-epoll-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.44.Final/netty-tcnative-boringssl-static-2.0.44.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-handler-proxy/4.1.70.Final/netty-handler-proxy-4.1.70.Final.jar:/home/yabesh/.m2/repository/io/netty/netty-codec-socks/4.1.70.Final/netty-codec-socks-4.1.70.Final.jar:/home/yabesh/.m2/repository/com/aayushatharva/brotli4j/brotli4j/1.6.0/brotli4j-1.6.0.jar:/home/yabesh/.m2/repository/com/aayushatharva/brotli4j/native-linux-x86_64/1.6.0/native-linux-x86_64-1.6.0.jar:/home/yabesh/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/yabesh/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/home/yabesh/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/home/yabesh/.m2/repository/ch/qos/logback/logback-classic/1.2.9/logback-classic-1.2.9.jar:/home/yabesh/.m2/repository/ch/qos/logback/logback-core/1.2.9/logback-core-1.2.9.jar:/home/yabesh/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.32/jcl-over-slf4j-1.7.32.jar:/home/yabesh/.m2/repository/org/antlr/antlr4-runtime/4.9.2/antlr4-runtime-4.9.2.jar:/home/yabesh/.m2/repository/com/jayway/jsonpath/json-path/2.7.0/json-path-2.7.0.jar:/home/yabesh/.m2/repository/net/minidev/json-smart/2.4.7/json-smart-2.4.7.jar:/home/yabesh/.m2/repository/net/minidev/accessors-smart/2.4.7/accessors-smart-2.4.7.jar:/home/yabesh/.m2/repository/org/ow2/asm/asm/9.1/asm-9.1.jar:/home/yabesh/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/home/yabesh/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/home/yabesh/.m2/repository/org/yaml/snakeyaml/1.29/snakeyaml-1.29.jar:/home/yabesh/.m2/repository/de/siegmar/fastcsv/2.0.0/fastcsv-2.0.0.jar:/home/yabesh/.m2/repository/info/picocli/picocli/4.6.1/picocli-4.6.1.jar:/home/yabesh/.m2/repository/io/github/classgraph/classgraph/4.8.108/classgraph-4.8.108.jar:/home/yabesh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.2/junit-jupiter-api-5.7.2.jar:/home/yabesh/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/yabesh/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/yabesh/.m2/repository/org/junit/platform/junit-platform-commons/1.7.2/junit-platform-commons-1.7.2.jar:/home/yabesh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.2/junit-jupiter-engine-5.7.2.jar:/home/yabesh/.m2/repository/org/junit/platform/junit-platform-engine/1.7.2/junit-platform-engine-1.7.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/yabesh"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-07-19"/>
+    <property name="java.home" value="/usr/lib/jvm/java-18-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="karate.options" value="--tags @debug"/>
+    <property name="surefire.real.class.path" value="/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test/target/surefire/surefirebooter10486948228311761391.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="18.0.2-ea+9-Ubuntu-222.04"/>
+    <property name="user.name" value="yabesh"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.18.10-76051810-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/yabesh/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="Unknown"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="18.0.2-ea"/>
+    <property name="user.dir" value="/home/yabesh/Desktop/Backup/projects/company_projects/fresh-app-be/fresh_app_test"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Private Build"/>
+    <property name="java.vm.version" value="18.0.2-ea+9-Ubuntu-222.04"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="62.0"/>
+  </properties>
+  <testcase name="testSample[1][1]" classname="SampleTest" time="0.42"/>
+  <testcase name="testSample[1][2]" classname="SampleTest" time="0.192"/>
+  <testcase name="testSample[1][3]" classname="SampleTest" time="0.192"/>
+  <testcase name="testSample[1][4]" classname="SampleTest" time="0.192"/>
+  <testcase name="testSample[1][5]" classname="SampleTest" time="0.187"/>
+  <testcase name="testSample[1][6]" classname="SampleTest" time="0.166"/>
+  <testcase name="testSample[1][7]" classname="SampleTest" time="0.742"/>
+  <testcase name="testSample[2][1]" classname="SampleTest" time="0.177"/>
+  <testcase name="testSample[2][2]" classname="SampleTest" time="0.184"/>
+  <testcase name="testSample[2][3]" classname="SampleTest" time="0.19"/>
+  <testcase name="testSample[2][4]" classname="SampleTest" time="0.171"/>
+  <testcase name="testSample[2][5]" classname="SampleTest" time="0.169"/>
+  <testcase name="testSample[2][6]" classname="SampleTest" time="0.337"/>
+  <testcase name="testSample[3][1]" classname="SampleTest" time="0.189"/>
+  <testcase name="testSample[3][2]" classname="SampleTest" time="0.175"/>
+  <testcase name="testSample[3][3]" classname="SampleTest" time="0.176"/>
+  <testcase name="testSample[3][4]" classname="SampleTest" time="0.279"/>
+  <testcase name="testSample[4][1]" classname="SampleTest" time="0.176"/>
+  <testcase name="testSample[4][2]" classname="SampleTest" time="0.176"/>
+  <testcase name="testSample[4][3]" classname="SampleTest" time="0.304"/>
+  <testcase name="testSample[5][1]" classname="SampleTest" time="0.169"/>
+  <testcase name="testSample[5][2]" classname="SampleTest" time="0.163"/>
+  <testcase name="testSample[5][3]" classname="SampleTest" time="0.24"/>
+  <testcase name="testSample[6][1]" classname="SampleTest" time="0.167"/>
+  <testcase name="testSample[6][2]" classname="SampleTest" time="0.174"/>
+  <testcase name="testSample[6][3]" classname="SampleTest" time="0.24"/>
+  <testcase name="testSample[7][1]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[7][2]" classname="SampleTest" time="0.233"/>
+  <testcase name="testSample[8][1]" classname="SampleTest" time="0.17"/>
+  <testcase name="testSample[8][2]" classname="SampleTest" time="0.195"/>
+  <testcase name="testSample[8][3]" classname="SampleTest" time="0.156"/>
+  <testcase name="testSample[8][4]" classname="SampleTest" time="0.169"/>
+  <testcase name="testSample[8][5]" classname="SampleTest" time="0.236"/>
+  <testcase name="testSample[9][1]" classname="SampleTest" time="0.168"/>
+  <testcase name="testSample[9][2]" classname="SampleTest" time="0.167"/>
+  <testcase name="testSample[9][3]" classname="SampleTest" time="0.167"/>
+  <testcase name="testSample[9][4]" classname="SampleTest" time="0.177"/>
+  <testcase name="testSample[9][5]" classname="SampleTest" time="0.684"/>
+  <testcase name="testSample[10][1]" classname="SampleTest" time="0.135"/>
+  <testcase name="testSample[10][2]" classname="SampleTest" time="0.24"/>
+  <testcase name="testSample[11][1]" classname="SampleTest" time="0.074"/>
+  <testcase name="testSample[12][1]" classname="SampleTest" time="0.011"/>
+  <testcase name="testSample[12][2]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[12][3]" classname="SampleTest" time="0.026"/>
+  <testcase name="testSample[12][4]" classname="SampleTest" time="0.102"/>
+  <testcase name="testSample[13][1]" classname="SampleTest" time="0.084"/>
+  <testcase name="testSample[14][1]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[14][2]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[14][3]" classname="SampleTest" time="0.013"/>
+  <testcase name="testSample[14][4]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[14][5]" classname="SampleTest" time="0.072"/>
+  <testcase name="testSample[15][1]" classname="SampleTest" time="0.078"/>
+  <testcase name="testSample[15][2]" classname="SampleTest" time="0.189"/>
+  <testcase name="testSample[15][3]" classname="SampleTest" time="0.178"/>
+  <testcase name="testSample[15][4]" classname="SampleTest" time="0.176"/>
+  <testcase name="testSample[15][5]" classname="SampleTest" time="0.269"/>
+  <testcase name="testSample[16][1]" classname="SampleTest" time="0.172"/>
+  <testcase name="testSample[16][2]" classname="SampleTest" time="0.236"/>
+  <testcase name="testSample[17][1]" classname="SampleTest" time="0.146"/>
+  <testcase name="testSample[17][2]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[17][3]" classname="SampleTest" time="0.241"/>
+  <testcase name="testSample[18][1]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[18][2]" classname="SampleTest" time="0.234"/>
+  <testcase name="testSample[19][1]" classname="SampleTest" time="0.013"/>
+  <testcase name="testSample[19][2]" classname="SampleTest" time="0.136"/>
+  <testcase name="testSample[19][3]" classname="SampleTest" time="0.282"/>
+  <testcase name="testSample[20][1]" classname="SampleTest" time="0.012"/>
+  <testcase name="testSample[20][2]" classname="SampleTest" time="0.214"/>
+  <testcase name="testSample[21][1]" classname="SampleTest" time="0.013"/>
+  <testcase name="testSample[21][2]" classname="SampleTest" time="0.143"/>
+  <testcase name="testSample[21][3]" classname="SampleTest" time="0.278"/>
+  <testcase name="testSample[22][1]" classname="SampleTest" time="0.017"/>
+  <testcase name="testSample[22][2]" classname="SampleTest" time="0.167"/>
+  <testcase name="testSample[22][3]" classname="SampleTest" time="0.203"/>
+  <testcase name="testSample[22][4]" classname="SampleTest" time="0.182"/>
+  <testcase name="testSample[22][5]" classname="SampleTest" time="0.192"/>
+  <testcase name="testSample[22][6]" classname="SampleTest" time="0.192"/>
+  <testcase name="testSample[22][7]" classname="SampleTest" time="0.257"/>
+  <testcase name="testSample[23][1]" classname="SampleTest" time="0.165"/>
+  <testcase name="testSample[23][2]" classname="SampleTest" time="0.178"/>
+  <testcase name="testSample[23][3]" classname="SampleTest" time="0.251"/>
+  <testcase name="testSample[24][1]" classname="SampleTest" time="0.209"/>
+  <testcase name="testSample[25][1]" classname="SampleTest" time="0.148"/>
+  <testcase name="testSample[25][2]" classname="SampleTest" time="0.011"/>
+  <testcase name="testSample[25][3]" classname="SampleTest" time="0.24"/>
+  <testcase name="testSample[26][1]" classname="SampleTest" time="0.148"/>
+  <testcase name="testSample[26][2]" classname="SampleTest" time="0.174"/>
+  <testcase name="testSample[26][3]" classname="SampleTest" time="0.175"/>
+  <testcase name="testSample[26][4]" classname="SampleTest" time="0.242"/>
+  <testcase name="testSample[27][1]" classname="SampleTest" time="0.153"/>
+  <testcase name="testSample[27][2]" classname="SampleTest" time="0.261"/>
+  <testcase name="testSample[28][1]" classname="SampleTest" time="0.18"/>
+  <testcase name="testSample[28][2]" classname="SampleTest" time="0.316"/>
+  <testcase name="testSample[29][1]" classname="SampleTest" time="0.134"/>
+  <testcase name="testSample[29][2]" classname="SampleTest" time="0.447"/>
+</testsuite>

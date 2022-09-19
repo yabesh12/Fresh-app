@@ -1,0 +1,5 @@
+mutation DeleteSalesExecutive($salesExecutiveId:ID!){
+  deleteSalesExecutive(salesExecutiveId:$salesExecutiveId){
+    message
+  }
+}

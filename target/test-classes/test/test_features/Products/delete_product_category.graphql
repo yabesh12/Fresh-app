@@ -1,0 +1,5 @@
+mutation DeleteCategory($categoryIds:[ID]!){
+    deleteCategory(categoryIds: $categoryIds){
+        message
+    }
+}

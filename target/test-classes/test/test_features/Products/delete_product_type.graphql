@@ -1,0 +1,5 @@
+mutation DeleteProductType($productTypeIds:[ID]!){
+    deleteProductType(productTypeIds: $productTypeIds){
+        message
+    }
+}

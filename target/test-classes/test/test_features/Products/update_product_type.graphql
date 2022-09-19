@@ -1,0 +1,12 @@
+mutation UpdateProductType($productTypeId:ID!, $isActive:Boolean, $isCreditAvailable:Boolean, $parentId:ID, $tax:Decimal, $title:String,$unit:String){
+    updateProductType(productTypeId: $productTypeId, isActive: $isActive, isCreditAvailable: $isCreditAvailable, parentId:$parentId, tax: $tax,title: $title, unit: $unit){
+        productType {
+            id
+            title
+            tax
+            isActive
+            isDeleted
+            isCreditAvailable
+        }
+    }
+}
